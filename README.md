@@ -32,3 +32,15 @@ cd $SCRATCH
 conda activate uniting_caller
 unitig-caller --call --refs $WORKDIR/input.txt --out out_prefix
 ```
+
+To create a new instruction file for the serve
+`nano name_of_my_instructions_file.sbatch`
+
+To submit a job to ARC
+`sbatch name_of_my_instructions_file.sbatch`
+
+To check if the server received my instructions file
+`squeue -u melika.moradi1`
+
+To follow every single step that the server is doing
+`tail -f slurm-########.out`
