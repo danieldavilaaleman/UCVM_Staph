@@ -28,6 +28,7 @@ conda create -f environment.yml
 run_dbcan database --db_dir db --aws_s3
 
 # Run CAZyme annotation using run_dbCAN
+conda activate run_dbcan_env
 run_dbcan CAZyme_annotation --mode protein --output_dir CAZ_annotation.out --input_raw_data A516SA1531_30092020.faa --db_dir ../db/ -v
 ```
 
