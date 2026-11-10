@@ -2,7 +2,7 @@
 
 #### spafinder
 
-#### bakta annotation
+### bakta annotation
 For genome annotation, we used `bakta` with apptainer and download the db-light database version 6
 ```
 # Build the container from Docker
@@ -17,7 +17,7 @@ apptainer run bakta.sif amrfinder_update --force_update --database /home/francis
 # Running bakta
 apptainer run bakta.sif bakta --db db-light/ --output annotation.test --genus Staphylococcus --species aureus --gram ? --threads 10 A516SA1531_30092020.fasta
 ```
-#### CAZyme annotation
+### CAZyme annotation
 For CAZyme annotation, `run_dbCAN` version 3 was used
 
 ```
