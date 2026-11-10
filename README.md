@@ -1,46 +1,28 @@
-# PAO1
-PAO1 ML
+## Repository for Staph Biotyper data analysis
 
-## First step
-Create a conda environment for unitig-caller
+#### spafinder
+
+#### bakta annotation
+For genome annotation, we used `bakta` with apptainer and download the db-light database version 6
+
 ```
-conda create -n uniting_caller
-conda activate uniting_caller
+# Build the container from Docker
+apptainer build bakta.sif docker://oschwengers/bakta
+
+# Download bakta db-light DB
+wget https://zenodo.org/records/14916843/files/db-light.tar.xz?download=1
+
+# AMRFinder DB should be updated before running bakta
+apptainer run bakta.sif amrfinder_update --force_update --database /home/franciscodaniel.davi/staph/db-light/amrfinderplus-db
+
+# Running bakta
+apptainer run bakta.sif bakta --db db-light/ --output annotation.test --genus Staphylococcus --species aureus --gram ? --threads 10 A516SA1531_30092020.fasta
 ```
+#### CAZyme annotation
 
-For getting the unitig list run
-```
-unitig-caller --call --refs refs.txt --out out_prefix
-```
+#### Distance matrix and visualization
 
-So running into ARC
-```
-#!/bin/bash
-#SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=10
-#SBATCH --mem=32gb
-#SBATCH --time=4:0:0
- 
-# Setting up the SCRATCH directory 
-WORKDIR=`pwd`
-SCRATCH=/scratch/$SLURM_JOBID
- 
-cd $SCRATCH
- 
-# Running unitig-caller inside the scratch
-conda activate uniting_caller
-unitig-caller --call --refs $WORKDIR/input.txt --out out_prefix
-```
 
-To create a new instruction file for the serve
-`nano name_of_my_instructions_file.sbatch`
 
-To submit a job to ARC
-`sbatch name_of_my_instructions_file.sbatch`
 
-To check if the server received my instructions file
-`squeue -u melika.moradi1`
 
-To follow every single step that the server is doing
-`tail -f slurm-########.out`
