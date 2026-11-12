@@ -1,5 +1,5 @@
 ## Staph Biotyper data analysis
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![Static Badge]
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ### *spaTyper.py*
 For *spa* identification of the *S.aureaus* genomes, [spaTyper](https://github.com/HCGB-IGTP/spaTyper) was installed using:
