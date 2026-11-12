@@ -1,4 +1,14 @@
-## Repository for Staph Biotyper data analysis
+## Staph Biotyper data analysis
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![Static Badge]
+![Static Badge](https://shields.io)
+[![Static Badge](https://shields.io)](https://r-project.org)
+
+
+A reproducible Snakemake workflow for 16S rRNA metagenomic data analysis and visualization.
+
+---
+
+
 
 ### *spaTyper.py*
 For *spa* identification of the *S.aureaus* genomes, [spaTyper](https://github.com/HCGB-IGTP/spaTyper) was installed using:
