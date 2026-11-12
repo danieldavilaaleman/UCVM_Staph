@@ -1,6 +1,6 @@
 ## Repository for Staph Biotyper data analysis
 
-#### spafinder
+### *spafinder*
 For *spa* identification of the *S.aureaus* genomes, [spaTyper](https://github.com/HCGB-IGTP/spaTyper) was installed using:
 
 ```
@@ -24,7 +24,7 @@ Running spa_typer
 spaTyper [-r sparepeats.fasta] [-o spatypes.txt] [-f GENOMES.fasta] [--output OUTPUT]
 ```
 
-### bakta annotation
+### Bakta annotation
 For genome annotation, we used `bakta` with apptainer and download the db-light database version 6
 ```
 # Build the container from Docker
