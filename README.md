@@ -1,6 +1,28 @@
 ## Repository for Staph Biotyper data analysis
 
 #### spafinder
+For *spa* identification of the *S.aureaus* genomes, `spaTyper`[https://github.com/HCGB-IGTP/spaTyper] was installed using:
+
+```
+module load python3
+pip install spaTyper
+```
+
+To download the repeats and spa-types, the Ridom spa Server was used:
+
+```
+# Download spa-types
+wget https://spa.ridom.de/dynamic/spatypes.txt
+
+# Download repeats
+wget https://spa.ridom.de/dynamic/sparepeats.fasta
+```
+
+Running spa_typer
+
+```
+spaTyper [-r sparepeats.fasta] [-o spatypes.txt] [-f GENOMES.fasta] [--output OUTPUT]
+```
 
 ### bakta annotation
 For genome annotation, we used `bakta` with apptainer and download the db-light database version 6
