@@ -1,7 +1,7 @@
 ## Repository for Staph Biotyper data analysis
 
 #### spafinder
-For *spa* identification of the *S.aureaus* genomes, `spaTyper`[https://github.com/HCGB-IGTP/spaTyper] was installed using:
+For *spa* identification of the *S.aureaus* genomes, [spaTyper](https://github.com/HCGB-IGTP/spaTyper) was installed using:
 
 ```
 module load python3
